@@ -1,0 +1,13 @@
+.card-body .card-text {
+    text-decoration: none !important;
+    color: black;
+}
+
+.card-product {
+    border-radius: 15px;
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

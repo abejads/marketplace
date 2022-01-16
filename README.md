@@ -19,12 +19,13 @@ php artisan migrate:fresh --seed
 2. Login
 3. Add cart (auto nambah kalo udah ada existing cart)
 4. Products (index, product, sama detail product)
+5. Checkout
+6. Jumlah barang di navbar
 ```
 
 # Fitur belum lengkap
 ```
 1. Account (blom ada edit dan masih nampilin nama sama email doang)
-2. Checkout belom ada
-3. Update jumlah di cart
-4. Jumlah barang di keranjang pada navbar 
+2. Update jumlah di cart
+
 ```

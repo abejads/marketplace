@@ -42,9 +42,12 @@
                     <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                       <!-- Data -->
                       <h4><strong>{{ $product->nama_produk }}</strong></h4>
-                      <button type="button" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
+                      <!-- {{ dd($key) }} -->
+                      <!-- <form action="{{url('/cart/deleteCart/'.$cart)}}"method="get"> -->
+                      <button type="submit" class="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item">
                         <i class="bi bi-trash-fill"></i>
                       </button>
+                      <!-- </form> -->
                       <!-- Data -->
                     </div>
 

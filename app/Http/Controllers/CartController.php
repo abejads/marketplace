@@ -74,4 +74,11 @@ class CartController extends Controller
 
         return back()->with("cart_error", "Produk gagal ditambahkan");
     }
+
+    public function deleteCart($id_item){
+        $cart = session("cart");
+        unset($cart[$id_item]);
+        session(["cart"->$cart]);
+        return redirect("/cart");
+    } 
 }

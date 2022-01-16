@@ -29,7 +29,7 @@
         
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/cart">Keranjang <i class="bi bi-cart2"></i><span class="badge bg-success ms-2">0</span></a>
+              <a class="nav-link" href="/cart">Keranjang <i class="bi bi-cart2"></i><span class="badge bg-success ms-2">@auth{{$incart}}@else 0 @endauth</span></a>
             </li>
             @if($title !== "Login" && $title !== "Register")
               @auth

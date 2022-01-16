@@ -15,6 +15,7 @@ class CartController extends Controller
 
         $carts = Cart::All()->where('users_id', auth()->user()->id);
         $products = array();
+        $incart = $carts->count();
         foreach($carts as $cart)
         {
             // dd
@@ -26,6 +27,7 @@ class CartController extends Controller
             [
                 "title"=> "Keranjang",
                 "carts" => $carts,
+                "incart"=>$incart,
                 "products" => $products
             ]
         );
@@ -63,7 +65,8 @@ class CartController extends Controller
         $validate['jumlah'] = $jumlah_total;
 
         if(Cart::updateOrCreate(
-            ["users_id" => $validate['users_id'], "products_id" => $validate['products_id']],
+            ["users_id" => $validate['users_id'], 
+            "products_id" => $validate['products_id']],
             ["jumlah" => $validate['jumlah']]
         )) {
             return redirect()->intended('/cart');

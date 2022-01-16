@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CheckoutController;
 
 
 /*
@@ -48,10 +49,11 @@ Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
 
 Route::post('/cart', [CartController::class, 'add'])->middleware('auth');
 
-Route::get('/checkout', function () {
-    return view('checkout', 
-    ["title"=> "Pembayaran"]
-    );
-});
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth');
+
+Route::post('/checkout', [CheckoutController::class, 'buy'])->middleware('auth');
+
+
 
 

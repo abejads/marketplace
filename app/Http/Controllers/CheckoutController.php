@@ -33,6 +33,7 @@ class CheckoutController extends Controller
             $total=$ct->jumlah;
             CheckoutDetail::tambah_checkout_detail($id_item,$id_checkout,$total);
         }
-         return redirect("/");
+        Cart::All()->where('users_id', auth()->user()->id)->each->delete();
+        return redirect("/");
     }
 }

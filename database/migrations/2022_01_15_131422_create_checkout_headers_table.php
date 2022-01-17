@@ -16,6 +16,12 @@ class CreateCheckoutHeadersTable extends Migration
         Schema::create('checkout_headers', function (Blueprint $table) {
             $table->id("id_checkout");
             $table->date("checkout_date");
+            $table->foreignId("users_id");
+            $table->string("firstname");
+            $table->string("lastname");
+            $table->string("email");
+            $table->string("address");
+            $table->string("address2")->nullable();
             $table->timestamps();
         });
     }

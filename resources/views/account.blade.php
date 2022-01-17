@@ -21,7 +21,7 @@
             </div>
 
             <div class="profile-userbuttons">
-              <a href="#" class="btn btn-danger btn-sm">Ubah Kata Sandi</a>
+              <a href="#" class="btn btn-danger btn-sm">Ubah Profile Picture</a>
             </div>
           </div>
         </div>

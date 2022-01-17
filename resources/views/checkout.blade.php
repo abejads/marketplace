@@ -59,7 +59,7 @@
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" name="firstname" required>
                   <div class="invalid-feedback">
                     Valid first name is required.
                   </div>
@@ -67,7 +67,7 @@
 
                 <div class="col-sm-6">
                   <label for="lastName" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" name="lastname" required>
                   <div class="invalid-feedback">
                     Valid last name is required.
                   </div>
@@ -75,7 +75,7 @@
 
                 <div class="col-12">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" name="email">
                   <div class="invalid-feedback">
                     Please enter a valid email address for shipping updates.
                   </div>
@@ -83,7 +83,7 @@
 
                 <div class="col-12">
                   <label for="address" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required name="address">
                   <div class="invalid-feedback">
                     Please enter your shipping address.
                   </div>
@@ -91,7 +91,7 @@
 
                 <div class="col-12">
                   <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
-                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" name="address2">
                 </div>
 
                 <div class="col-md-5">

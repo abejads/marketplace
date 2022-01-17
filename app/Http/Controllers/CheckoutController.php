@@ -21,11 +21,21 @@ class CheckoutController extends Controller
     );
     }
 
-    function buy(){
-        
+    function buy(Request $request){
+        $request->validate([
+            "email" => "required|email:dns"
+        ]);
+
         
         $cart = DB::table("carts")->where('users_id', auth()->user()->id)->get();
-        $id_checkout = CheckoutHeader::tambah_checkout();
+        $id_checkout = CheckoutHeader::tambah_checkout(
+            auth()->user()->id,
+            $request->input('firstname'),
+            $request->input('lastname'),
+            $request->input('email'),
+            $request->input('address'),
+            $request->input('address2')
+        );
         foreach($cart as $ct){
           
             $id_item=$ct->products_id;

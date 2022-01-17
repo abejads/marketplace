@@ -11,11 +11,17 @@ class CheckoutHeader extends Model
     protected $primaryKey = "id_checkout";
 
     protected $fillable =[
-        'checkout_date'
+        'checkout_date','users_id','firstname','lastname','email','address','address2'
     ];
 
-    static function tambah_checkout(){
+    static function tambah_checkout($user,$firstname,$lastname,$email,$address,$address2){
         $data= CheckoutHeader::create([
+            "users_id"=>$user,
+            "firstname"=>$firstname,
+            "lastname"=>$lastname,
+            "email"=>$email,
+            "address"=>$address,
+            "address2"=>$address2,
             "checkout_date"=> date("Y-m-d"),
         ]);
 

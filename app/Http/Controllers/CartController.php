@@ -16,6 +16,7 @@ class CartController extends Controller
         $carts = Cart::All()->where('users_id', auth()->user()->id);
         $products = array();
         $incart = $carts->count();
+        // dd($carts);
         foreach($carts as $cart)
         {
             // dd
@@ -77,9 +78,10 @@ class CartController extends Controller
 
     public function deleteCart($id_item){
         //dd($id_item);
-        $cart=Cart::find($id_item);
-        dd($cart);
-        //$cart->delete();
+        $carts = Cart::All()->where('id', $id_item)->each->delete();
+        
+       
+        // dd($carts);
         return redirect("/cart");
     } 
 }

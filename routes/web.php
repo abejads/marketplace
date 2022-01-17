@@ -49,7 +49,7 @@ Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
 
 Route::post('/cart', [CartController::class, 'add'])->middleware('auth');
 
-Route::get('/cart/deleteCart/{id}',[CartController::class,'deleteCart'])->where("id","[0-9]+");
+Route::get('/cart/deleteCart/{id}',[CartController::class,'deleteCart'])->where("id","[0-9]+")->middleware('auth');
 
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->middleware('auth');

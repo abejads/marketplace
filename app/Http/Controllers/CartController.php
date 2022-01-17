@@ -78,7 +78,7 @@ class CartController extends Controller
 
     public function deleteCart($id_item){
         //dd($id_item);
-        $carts = Cart::All()->where('id', $id_item)->each->delete();
+        $carts = Cart::All()->where('id', $id_item)->where('users_id', auth()->user()->id)->each->delete();
         
        
         // dd($carts);

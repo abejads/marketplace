@@ -76,9 +76,10 @@ class CartController extends Controller
     }
 
     public function deleteCart($id_item){
-        $cart = session("cart");
-        unset($cart[$id_item]);
-        session(["cart"->$cart]);
+        //dd($id_item);
+        $cart=Cart::find($id_item);
+        dd($cart);
+        //$cart->delete();
         return redirect("/cart");
     } 
 }
